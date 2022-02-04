@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #313131;
+      }
+      .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+        flex-wrap: wrap;
+      }
+      .container .card {
+        position: relative;
+        width: 300px;
+        padding: 20px;
+        margin: 20px;
+        background: #3f3f3f3f;
+      }
+      .container .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 20px solid transparent;
+        border-right: 20px solid #17e78c;
+        border-top: 20px solid #17e78c;
+      }
+      .container .card.active::before{
+        border-right: 20px solid #ff3b7e;
+        border-top: 20px solid #ff3b7e;      }
+      .container .card .icon {
+        margin-bottom: 10px;
+      }
+      .container .card .icon img {
+        max-width: 90px;
+      }
+      .container .card .content {
+        position: relative;
+        height: 215px;
+        overflow: hidden;
+      }
+      .container .card.card.active .content{
+          height: auto;
+      }
+      .container .card .content::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(transparent, #3f3f3f);
+      }
+      .container .card.active .content::before{
+          display: none;
+      }
+      .container .card .content h3 {
+        color: #fff;
+        font-size: 1.4em;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .container .card .content p {
+        font-weight: 300;
+        color: #ccc;
+      }
+      .container .card .more {
+        position: relative;
+        padding: 10px 15px;
+        background: #17e78c;
+        margin-top: 17px;
+        display: inline-block;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: #383838;
+        font-weight: 500;
+        letter-spacing: 2px;
+        font-size: 14px;
+      }
+      .container .card.active .more{
+          background: #ff3b7e;
+      }
+      .container .card .more::before {
+        content: "Read More";
+      }
+      .container .card.active .more::before {
+        content: "Read Less";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="icon">
+          <img src="/New folder/computer.png" alt="" />
+        </div>
+        <div class="content">
+          <h3>Web & Mobile Development</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nobis
+            repellendus, quasi nemo cupiditate adipisci, modi ab minus nisi
+            natus molestias commodi omnis vitae deserunt nam ipsum excepturi
+            aspernatur obcaecati? Quo quod laborum, ab pariatur ullam ex modi
+            fugit minima, cum laboriosam, commodi et nobis! Ullam vitae aliquam
+            officia iste minus iure excepturi alias. Rem? Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Et nobis repellendus, quasi nemo
+            cupiditate adipisci, modi ab minus nisi natus molestias commodi
+            omnis vitae deserunt nam ipsum excepturi aspernatur obcaecati? Quo
+            quod laborum, ab pariatur ullam ex modi fugit minima, cum
+            laboriosam, commodi et nobis! Ullam vitae aliquam officia iste minus
+            iure excepturi alias. Rem?
+          </p>
+        </div>
+        <a class="more"></a>
+      </div>
+      <div class="card">
+        <div class="icon">
+          <img src="/New folder/support.png" alt="" />
+        </div>
+        <div class="content">
+          <h3>Customer Support</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente
+            ea doloribus numquam commodi rem veniam! Eos excepturi, quaerat
+            reprehenderit quae debitis dicta cupiditate nesciunt obcaecati sit
+            molestiae sunt perferendis odio nulla repellendus dolor. Molestiae
+            consequatur fuga ullam tenetur aut architecto sed, similique quaerat
+            aperiam itaque? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Et nobis repellendus, quasi nemo cupiditate adipisci, modi ab
+            minus nisi natus molestias commodi omnis vitae deserunt nam ipsum
+            excepturi aspernatur obcaecati? Quo quod laborum, ab pariatur ullam
+            ex modi fugit minima, cum laboriosam, commodi et nobis! Ullam vitae
+            aliquam officia iste minus iure excepturi alias. Rem?
+          </p>
+        </div>
+        <a class="more"></a>
+      </div>
+      <div class="card">
+        <div class="icon">
+          <img src="/New folder/affiliate-marketing.png" alt="" />
+        </div>
+        <div class="content">
+          <h3>Marketing & Communication</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+            aliquam accusantium magnam odit nam, harum eos nesciunt eligendi
+            libero excepturi quam magni velit fugiat minus fuga delectus facilis
+            a. Corporis cum aperiam officiis, recusandae quasi sunt quae eum
+            dolorum vitae qui impedit suscipit magni temporibus. Qui in
+            recusandae non rerum omnis illo beatae facilis debitis dolor rem,
+            ullam molestias ex? Enim illum nesciunt fuga laboriosam. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Et nobis repellendus,
+            quasi nemo cupiditate adipisci, modi ab minus nisi natus molestias
+            commodi omnis vitae deserunt nam ipsum excepturi aspernatur
+            obcaecati? Quo quod laborum, ab pariatur ullam ex modi fugit minima,
+            cum laboriosam, commodi et nobis! Ullam vitae aliquam officia iste
+            minus iure excepturi alias. Rem?
+          </p>
+        </div>
+        <a class="more"></a>
+      </div>
+    </div>
+    <script>
+      let more = document.querySelectorAll(".more");
+      for (let i = 0; i < more.length; i++) {
+        more[i].addEventListener("click",function(){
+            more[i].parentNode.classList.toggle("active");
+        })
+      }
+    </script>
+  </body>
+</html>

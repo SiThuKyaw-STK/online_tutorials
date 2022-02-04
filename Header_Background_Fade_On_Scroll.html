@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #000;
+      }
+      .header {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        overflow: hidden;
+      }
+      .header #bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/New_folder/image.jpg);
+      }
+      section {
+        padding: 100px;
+        color: #fff;
+        min-height: 100vh;
+      }
+      section h2 {
+        font-size: 3em;
+      }
+      section p {
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div id="bg">
+          <h1 style="display: flex;justify-content: center; align-items: center; height: 100%;">ကျေးဇူးပါ</h1>
+      </div>
+    </div>
+    <section class="">
+      <h2>Header Background Fad ON Scroll</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+        adipisci est nihil expedita, laudantium suscipit iusto, ipsam
+        necessitatibus, repellat eaque tenetur tempora rem iste quae mollitia
+        non vero iure assumenda voluptatum atque nesciunt? Tempora inventore
+        voluptates expedita qui cumque porro vero veritatis deserunt nihil iste
+        blanditiis eum doloribus repellendus ea cupiditate omnis laborum,
+        nostrum rerum atque excepturi ex? Possimus odit accusantium ratione quam
+        dignissimos inventore excepturi quibusdam corrupti, adipisci obcaecati
+        velit tempore fugit unde illo debitis nemo illum magnam quidem facilis
+        labore repudiandae ipsa repellendus repellat. Optio ea rerum
+        exercitationem, sunt enim quas. Eius officia mollitia reiciendis vero
+        molestias explicabo quis possimus tempora a rerum, voluptas officiis
+        voluptatum consectetur ullam, dignissimos ab laudantium eligendi
+        blanditiis recusandae temporibus animi? Reprehenderit, quia magni! Quasi
+        asperiores magni eius repellendus illo perspiciatis optio reiciendis
+        illum, consequuntur eligendi deserunt ex animi dolorem nemo quod at
+        ipsam hic aspernatur vel dolore minima. Quia unde accusantium corrupti
+        earum! Aliquam at, nulla blanditiis quibusdam minus sunt velit non est
+        nam in.<br /><br />
+        Doloremque veritatis cum modi accusamus nihil ad natus incidunt mollitia
+        nulla tempore blanditiis sed ducimus dolore obcaecati quod amet odio
+        praesentium eligendi dicta fugiat quae eveniet, omnis quis! Praesentium
+        nisi voluptates nihil, aliquam illo qui officiis veniam nostrum, enim
+        atque cumque facilis explicabo numquam! Placeat eligendi, dolore
+        temporibus enim totam cupiditate, omnis, molestias nobis quo ratione
+        suscipit mollitia dicta reiciendis doloribus labore voluptatem facere
+        sunt! Quis a pariatur expedita mollitia, aspernatur autem, nihil impedit
+        magni facilis architecto saepe aut atque illo qui, necessitatibus
+        eveniet exercitationem corporis obcaecati id cumque asperiores. Id
+        ducimus rerum temporibus magnam nostrum est, blanditiis delectus. Velit
+        suscipit atque adipisci! Fugiat laborum quo sit quia, tempora voluptates
+        expedita. Labore, maxime dignissimos? Cupiditate eveniet deleniti
+        excepturi quas, rerum sed architecto qui omnis ipsum sint accusantium
+        dignissimos? A neque unde maxime non. Eius in voluptatum expedita?
+      </p>
+    </section>
+
+    <script>
+      let headerBg = document.getElementById("bg");
+      window.addEventListener("scroll", function () {
+        headerBg.style.opacity = 1 - +window.pageYOffset / 550 + "";
+        headerBg.style.top = +window.pageYOffset + "px";
+        headerBg.style.backgroundPositionY = -+window.pageYOffset / 2 + "px";
+      });
+    </script>
+  </body>
+</html>

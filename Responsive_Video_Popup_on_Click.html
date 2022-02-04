@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .banner{
+          position: relative;
+          width: 100%;
+          min-height: 100vh;
+          background: #000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .banner .content{
+          max-width: 550px;
+      }
+      .banner .content img{
+          max-width: 100%;
+          margin-bottom: 15px;
+      }
+      .banner .content h2{
+          color: #fff;
+          font-weight: 500px;
+          font-size: 2em;
+      }
+      .banner .content p{
+          font-size: 1.2em;
+          color: #fff;
+          font-weight: 300;
+          margin: 15px 0px 25px;
+      }
+      .banner .content a{
+          position: relative;
+          text-transform: uppercase;
+          background: #fff;
+          color: #111;
+          font-weight: 500px;
+          letter-spacing: 2px;
+          text-decoration: none;
+          display: inline-block;
+          padding: 10px 15px;
+      }
+      .trailer{
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          z-index: 10000;
+          background: rgba(0,0,0,0.95);
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          visibility: hidden;
+          opacity: 0;
+      }
+      .trailer.active{
+          visibility: visible;
+          opacity: 1;
+      }
+      .trailer video{
+          position: relative;
+          max-width: 900px;
+          outline: none;
+      }
+      .close{
+          position: absolute;
+          top: 30px;
+          right: 30px;
+          cursor: pointer;
+          filter: invert(1);
+      }
+      @media (max-width:991px){
+          .trailer video{
+              max-width: 90%;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="content">
+        <img src="/New_folder/iphone-12-pro-review-18-1.jpg" alt="" />
+        <h2>iphone 12 pro review</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
+          tempora enim asperiores explicabo repellat quis beatae quae similique
+          ea quasi perspiciatis, temporibus voluptas commodi quo accusamus rem
+          vitae omnis! Suscipit?
+        </p>
+        <a href="#" onclick="toggle()">Watch Trailer</a>
+      </div>
+    </div>
+    <div class="trailer">
+        <video src="/videos/iphone-12-trailer-2020.mp4" controls="true"></video>
+        <i  class="fas fa-times fa-3x close" onclick="toggle()"></i>
+    </div>
+    <script>
+        function toggle(){
+            var trailer=document.querySelector(".trailer");
+            var video=document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.pause();
+            video.currentTime();
+        }
+
+    </script>
+  </body>
+</html>

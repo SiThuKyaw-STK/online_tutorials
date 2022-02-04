@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+        nav{
+            position: relative;
+            display: flex;
+        }
+        nav a{
+            position: relative;
+            margin: 0px 20px;
+            font-size: 2em;
+            color: #fff;
+            text-decoration: none;
+        }
+        nav .maker{
+            position: absolute;
+            left: 0;
+            height: 4px;
+            width: 0;
+            background: #00fff0;
+            bottom: -8px;
+            transition: 0.5s;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="maker"></div>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="#">Protofolio</a>
+        <a href="#">Team</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <script>
+        let maker=document.querySelector(".maker");
+        let item=document.querySelectorAll('nav a');
+
+        function indicator(e){
+            maker.style.left=e.offsetLeft+'px';
+            maker.style.width=e.offsetWidth+'px';
+        }
+        item.forEach(link=>{
+            link.addEventListener('click',(e)=>{
+                indicator(e.target);
+            })
+        })
+    </script>
+</body>
+</html>
